@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* BOOTSTRAP OVERRIDES 
+  Bootstrap 5.3+ handles dark mode via data-bs-theme automatically.
+  We only need to define custom colors if we want to change the defaults.
+*/
+
+:root {
+  /* Define custom variables that adapt to the theme */
+  --custom-primary: #4f46e5; /* Indigo-like color */
+  --custom-primary-hover: #4338ca;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[data-bs-theme="dark"] {
+  --custom-primary: #818cf8;
+  --custom-primary-hover: #6366f1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Ensure the body takes full height for the sticky footer */
+body, #root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Skill Badge Styles */
+.badge-soft-primary {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+[data-bs-theme="dark"] .badge-soft-primary {
+  background-color: rgba(13, 110, 253, 0.2);
+  color: #6ea8fe;
+}
+
+/* Hero Section Specifics */
+.hero-section {
+  background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+[data-bs-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, #312e81 0%, #0e7490 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navbar Transitions */
+.navbar {
+  transition: all 0.3s ease-in-out;
 }
