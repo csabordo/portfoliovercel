@@ -9,7 +9,7 @@ const projectsData = [
     description: "A simple E-commerce Platform.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "https://placehold.co/600x400/1e40af/ffffff?text=E-Commerce",
-    link: "#"
+    link: "https://github.com/csabordo/csabordo.github.io"
   },
   {
     id: 2,
@@ -18,6 +18,14 @@ const projectsData = [
     technologies: ["React", "Bootstrap"],
     image: "https://placehold.co/600x400/d97706/ffffff?text=Chat+App",
     link: "#"
+  },
+  {
+    id: 3,
+    title: "Item Resell Forecast",
+    description: "A Simple Online Item Forecast",
+    technologies: ["Tensor", "Bootstrap"],
+    image: "https://placehold.co/600x400/023020/ffffff?text=Forecast",
+    link: "https://github.com/csabordo/itemForecast/tree/master"
   },
 ];
 
